@@ -33,7 +33,7 @@ namespace PPass {
 
             for (int i = 0; i < length; ++i)
             {
-                int validRanges[4]; // ³íäåêñè äîïóñòèìèõ ä³àïàçîí³â
+                int validRanges[4]; // Â³Ã­Ã¤Ã¥ÃªÃ±Ã¨ Ã¤Ã®Ã¯Ã³Ã±Ã²Ã¨Ã¬Ã¨Ãµ Ã¤Â³Ã Ã¯Ã Ã§Ã®Ã­Â³Ã¢
                 int count = 0;
 
                 if (useNumbers) validRanges[count++] = 1;
@@ -56,7 +56,7 @@ namespace PPass {
                 generatedPassword += static_cast<char>(random_pass);
             }
 
-            password += generatedPassword + "\n";
+            password += generatedPassword + "\r\n";
         }
 
         return password;
