@@ -344,12 +344,12 @@ namespace PPass {
 			bool useBigLetters = checkBox2->Checked;
 			bool useSpecialSymbols = checkBox4->Checked;
 
-			// Âèêëèêàòè ôóíêö³þ äëÿ ãåíåðàö³¿ ïàðîë³â ç ôàéëó Source.cpp
+			// Ã‚Ã¨ÃªÃ«Ã¨ÃªÃ Ã²Ã¨ Ã´Ã³Ã­ÃªÃ¶Â³Ã¾ Ã¤Ã«Ã¿ Ã£Ã¥Ã­Ã¥Ã°Ã Ã¶Â³Â¿ Ã¯Ã Ã°Ã®Ã«Â³Ã¢ Ã§ Ã´Ã Ã©Ã«Ã³ Source.cpp
 			std::string generatedPassword = pass_gen(length, count, useNumbers, useSmallLetters, useBigLetters, useSpecialSymbols);
 
-			// Âèâåñòè çãåíåðîâàíèé ïàðîëü ó label6
+			// Ã‚Ã¨Ã¢Ã¥Ã±Ã²Ã¨ Ã§Ã£Ã¥Ã­Ã¥Ã°Ã®Ã¢Ã Ã­Ã¨Ã© Ã¯Ã Ã°Ã®Ã«Ã¼ Ã³ label6
 			String^ managedPassword = gcnew String(generatedPassword.c_str());
-			textBox3->Text = managedPassword;
+			textBox3->Text = managedPassword + System::Environment::NewLine;
 		}
 		catch (System::FormatException^ ex) {
 			MessageBox::Show(ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
